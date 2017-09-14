@@ -1,6 +1,6 @@
 ---
 title: "SiteRennes"
-author: "constance"
+author: "Camille, Constance, Henri et Frédéric"
 date: "14 septembre 2017"
 output: html_document
 ---
