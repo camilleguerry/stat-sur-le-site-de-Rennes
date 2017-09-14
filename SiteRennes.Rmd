@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
   data = read.csv("https://raw.githubusercontent.com/camilleguerry/stat-sur-le-site-de-Rennes/master/statistiques-de-frequentation-du-site-rennes-metropole-en-acces-libre.csv",sep=";")
   names(data) = c("Date","NumberOfVisitors","NumberOfViewedPages")
 ```
-##Number of visitors
+##Number of viewed pages
 ```{r data}
 library(ggplot2)
 ggplot(data = data, aes(x=Date, y=NumberOfViewedPages)) + geom_point() + ylab("Number of pages view") + ggtitle("Number of pages view (by user) in functions of the date")
