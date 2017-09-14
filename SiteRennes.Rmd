@@ -8,9 +8,14 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+<!-- getting datas -->
+```{r, include=FALSE}
+  data = read.csv("https://raw.githubusercontent.com/camilleguerry/stat-sur-le-site-de-Rennes/master/statistiques-de-frequentation-du-site-rennes-metropole-en-acces-libre.csv",sep=";")
+  names(data) = c("Date","NumberOfVisitors","NumberOfViewedPages")
+```
+##Number of visitors
 ```{r data}
 library(ggplot2)
-ggplot(data = data, aes(x=Date, y=PagesVues)) + geom_point();
+ggplot(data = data, aes(x=Date, y=NumberOfVisitors)) + geom_point()
 ```
 
