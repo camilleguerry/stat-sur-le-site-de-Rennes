@@ -16,6 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ##Number of visitors
 ```{r data}
 library(ggplot2)
-ggplot(data = data, aes(x=Date, y=NumberOfVisitors)) + geom_point()
+ggplot(data = data, aes(x=Date, y=PagesVues)) + geom_point() + ylab("Number of pages view") + ggtitle("Number of pages view (by user) in functions of the date")
 ```
 
