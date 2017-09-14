@@ -14,8 +14,13 @@ knitr::opts_chunk$set(echo = TRUE)
   names(data) = c("Date","NumberOfVisitors","NumberOfPageViews")
 ```
 ##Number of page views
-```{r data}
+```{r dataViewedPage}
 library(ggplot2)
 ggplot(data = data, aes(x=Date, y=NumberOgPageViews)) + geom_point() + ylab("Number of page views") + ggtitle("Number of page views (by user) in functions of the date")
 ```
 
+##Number of visitors
+```{r dataVisitors}
+library(ggplot2)
+ggplot(data = data, aes(x=Date, y=NumberOfVisitors)) + geom_point() + ylab("Number of visitor") + ggtitle("Number of visitor in functions of the date")
+```
