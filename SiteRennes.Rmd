@@ -24,3 +24,9 @@ ggplot(data = data, aes(x=Date, y=NumberOfPageViews)) + geom_point() + ylab("Num
 library(ggplot2)
 ggplot(data = data, aes(x=Date, y=NumberOfVisitors)) + geom_point() + ylab("Number of visitor") + ggtitle("Number of visitor in functions of the date")
 ```
+
+##Mean of page viewed per visitors
+```{r dataMeanPageVisitors}
+library(ggplot2)
+ggplot(data = data, aes(x=Date, y=NumberOfPageViews/NumberOfVisitors)) + geom_point() + ylab("Number of page views per visitors") + ggtitle("Number of page views per visitor in functions of the date")
+```
