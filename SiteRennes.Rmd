@@ -28,17 +28,16 @@ ggplot(data = data, aes(x=Date, y=NumberOfVisitors)) + geom_point() + ylab("Numb
 ##Mean of page viewed per visitors
 ```{r dataMeanPageVisitors}
 library(ggplot2)
+library(dplyr)
 ggplot(data = data, aes(x=Date, y=NumberOfPageViews/NumberOfVisitors)) + geom_point() + ylab("Number of page views per visitors") + ggtitle("Number of page views per visitor in functions of the date")
 ```
 ```{r}
 library(stringr)
 dates2017 = data[str_detect(data$Date,"2017"),]
 tmp=dates2017 %>% group_by(str_sub(dates2017$Date, 6, 7)) 
-tmp
 names(tmp) = c("Date","Utilisateurs","PagesVues", "Month")
 tab = aggregate(tmp$Utilisateurs, by=list(Month=tmp$Month), FUN=sum)
-tab
-barplot(tab$x, main="Title",xlab="MONTH", ylab="Number of users",names.arg = c("Jan","Fe","Mar","Ap","M","J","J","A","S"))
+barplot(tab$x, main="Number of visitors per month in 2017",xlab="MONTH", ylab="Number of visitors",names.arg = c("01","02","03","04","05","06","07","08","09"))
 
 ```
 
