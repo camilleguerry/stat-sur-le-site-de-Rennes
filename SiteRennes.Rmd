@@ -11,11 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- getting datas -->
 ```{r, include=FALSE}
   data = read.csv("https://raw.githubusercontent.com/camilleguerry/stat-sur-le-site-de-Rennes/master/statistiques-de-frequentation-du-site-rennes-metropole-en-acces-libre.csv",sep=";")
-  names(data) = c("Date","NumberOfVisitors","NumberOfViewedPages")
+  names(data) = c("Date","NumberOfVisitors","NumberOfPageViews")
 ```
-##Number of viewed pages
+##Number of page views
 ```{r data}
 library(ggplot2)
-ggplot(data = data, aes(x=Date, y=NumberOfViewedPages)) + geom_point() + ylab("Number of pages view") + ggtitle("Number of pages view (by user) in functions of the date")
+ggplot(data = data, aes(x=Date, y=NumberOgPageViews)) + geom_point() + ylab("Number of page views") + ggtitle("Number of page views (by user) in functions of the date")
 ```
 
