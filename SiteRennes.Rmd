@@ -1,0 +1,16 @@
+---
+title: "SiteRennes"
+author: "constance"
+date: "14 septembre 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r data}
+library(ggplot2)
+ggplot(data = data, aes(x=Date, y=PagesVues)) + geom_point();
+```
+
